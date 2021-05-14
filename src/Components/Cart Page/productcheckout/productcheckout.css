@@ -1,0 +1,148 @@
+.Productcheckout{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* height: 100px !important; */
+    transition: ease-in 150ms;
+    /* margin-bottom: 50px; */
+    padding: 10px 20px;
+}
+
+.Productcheckout__product{
+    display: flex;
+    align-items: center;
+}
+
+.Productcheckout:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.Productcheckout__image{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    /* margin-right: 20px; */
+}
+
+
+.Productcheckout__addbuttons, .Productcheckout__qyt, .Productcheckout__minusbuttons{
+    padding: 0 20px;
+}
+
+.Productcheckout__addbuttons,.Productcheckout__minusbuttons{
+    cursor: pointer;
+}
+
+.Productcheckout__prices__old{
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.Productcheckout__prices{
+    text-align: center;
+}
+
+.Productcheckout__buttons{
+    /* display: flex; */
+    /* align-items: center; */
+    border: black 1.5px solid;
+    border-radius: 5px;
+    /* height: 40px; */
+    background-color: white;
+}
+
+.productcheckout__button{
+    /* font-weight: 600;
+    font-size: 20px;
+    color: #222222;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.4;
+    transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),opacity 150ms ease-out; */
+    font-size: 14px;
+    font-weight: 600;
+    background: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;  
+    padding: 8px 15px;
+    margin: 5px 10px;
+    transition: all 200ms ease-in-out;
+    transform: background-color scale(0);
+
+}
+
+.productcheckout__button:hover{
+    background-color: rgb(235, 235, 235);
+    padding: 8px 15px;
+    border-radius: 15px;
+    transform: background-color scale(1.5);
+}
+
+.productcheckout__button__coupon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productcheckout__button:hover{
+    /* transform: scale(0.7) perspective(1px);
+    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15); */
+    
+}
+
+.productcheckout__coupon{
+    /* position: relative; */
+    display: flex;
+    margin: 15px 0;
+    border-radius: 96px;
+    box-shadow: 1px 2px 4px 0 rgba(34, 34, 34, 0.1) inset;
+    background: #FFFFFF;
+    height: 5vh;
+    width: 100%;
+}
+
+.productcheckout__coupon > input {
+    padding-left: 18px;
+    border-top-left-radius: 96px;
+    border-bottom-left-radius: 96px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    border: whitesmoke 1px solid;
+    background: transparent;
+    flex: 1;
+    outline: none;
+    font-size: 16px;
+    line-height: 28px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+    transition: border 200ms ease-out;
+}
+
+.productcheckout__coupon:hover > input{
+    border: rgb(185, 185, 185) 1px solid;
+}
+
+.productcheckout__coupon > button {
+    color: #FFFFFF;
+    border-color: #222222;
+    background-color: black;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 96px;
+    border-bottom-right-radius: 96px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-left: 0;
+}

@@ -1,0 +1,132 @@
+.productpploftenbuy{
+    display: flex;
+    /* overflow: hidden; */
+    flex-direction: column;
+    position: relative;
+    /* margin: 15px 10px 15px 10px !important; */
+    transition: ease-in-out 300ms;
+    /* padding: 15px !important; */
+    -webkit-user-select: none;
+    border: solid 10px white;
+    border-radius: 10px;
+}
+
+.productpploftenbuy:hover{
+    cursor: pointer;
+    border: solid 10px lightgray;
+    background-color: lightgray;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.productpploftenbuySelected{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transition: ease-in-out 300ms;
+    border-radius: 10px;
+    border: solid 10px lightgray;
+    background-color: lightgray;
+    cursor: pointer;
+    /* box-sizing: border-box; */
+    /* padding: 0 3.5%; */
+}
+
+.productpploftenbuySelectedContainer{
+    border: solid 2px black;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 15px;
+}
+.productpploftenbuySelectedContainer__off{
+    border: solid 2px transparent;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+
+.productpploftenbuySelectedIcon{
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    right: -15px;
+    font-size: 35px !important;
+}
+
+.check-bg{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    z-index: 1;
+    top: -15px;
+    right: -15px;
+}
+
+
+.productpploftenbuy__discount{
+    position: absolute;
+    background-color: rgb(255, 37, 37);
+    transition:all .3s ease-in-out 0s;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 3px;
+} 
+
+.productpploftenbuy  img {
+    /* align-self: center; */
+    object-fit: cover;
+    pointer-events: none;
+    /* flex: 1; */
+}
+
+.productpploftenbuy__images{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.productpploftenbuy__image1{
+    opacity:1;
+    transition:all .3s ease-out 0s;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.productpploftenbuy:hover .productpploftenbuy__image1{
+    transform: scale(1.3);
+}
+
+.productpploftenbuySelected:hover .productpploftenbuy__image1{
+    transform: scale(1.3);
+}
+
+
+.productpploftenbuy__image2{
+    opacity:0;
+    transition:all .3s ease-out 0s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.productpploftenbuy:hover .productpploftenbuy__image2 {
+    opacity: 1;
+}
+
+.productpploftenbuySelected:hover .productpploftenbuy__image2 {
+    opacity: 1;
+}
+
+
+

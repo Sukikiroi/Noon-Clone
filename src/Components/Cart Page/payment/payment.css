@@ -1,0 +1,25 @@
+.paymentmethod{
+    box-shadow: 0 0 8px 3px lightgray;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.paymentmethod__button{
+   width: 100%;
+   margin: 15px 0;
+   font-size: 18px;
+   font-weight: 600;
+   color: white;
+   background-color: black;
+   border: none;
+   outline: none;
+   height: 6vh; 
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 200ms ease-in-out;
+}
+
+.paymentmethod__button:hover{
+    transform: scale(1.02);
+    background-color: rgb(32, 32, 32);
+}

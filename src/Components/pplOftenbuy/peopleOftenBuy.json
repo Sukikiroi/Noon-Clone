@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "imgSrc": "https:gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/12/30/goods_img-v1/20201230141712_5fec1b68d7740.jpg",
+        "imgSrc2": "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/12/22/goods_img-v1/20201222120405_5fe17035bb60e.jpg",
+        "titleProduct": "1808-DL180 Fashion Color Matching Thickened Warm Long-sleeved Men's Sweater",
+        "discount": 35,
+        "priceOld": 5.59,
+        "priceNew": 3.59,
+        "isSelected":true
+        
+    },
+    {
+        "id":2,
+        "imgSrc": "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/08/07/goods_img-v2/20200807171735_97744.jpg",
+        "imgSrc2": "https://gloimg.gbtcdn.com/images/pdm-product-pic/Electronic/2020/09/27/source-img/20200927181201_5f706571f2ec4.jpg_220x220.jpg",
+        "titleProduct": "Xiaomi Redmi 9C 4G Smartphone 6.53 inch Media Tek Helio G35 2.3GHz Octa-core 13MP AI Triple Camera 5000mAh Battery EU Version",
+        "discount": 50,
+        "priceOld": 552.59,
+        "priceNew": 540.59,
+        "isSelected":false
+    },
+    {
+        "id":3,
+        "imgSrc": "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/12/22/goods_img-v1/20201222175517_5fe1c28503426.jpg",
+        "titleProduct": "Chuwi CoreBook X Laptop Intel Core I5-7267U Notebook 14 Inch 2160 x 1440 Resolution DDR4 16GB 256GB SSD Winddows 10 Computer 46.2W Battery",
+        "discount": 45,
+        "priceOld": 499.59,
+        "priceNew": 470.59,
+        "isSelected":true
+    }
+]

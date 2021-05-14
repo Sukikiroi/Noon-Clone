@@ -1,0 +1,29 @@
+.downloadapp{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.downloadapp__section2{
+    display: flex;
+    align-items: center;
+}
+
+.downloadapp_appStore {
+}
+
+.downloadapp_googlePlay {
+    margin-top: 8px;
+}
+.downloadapp_appStore, .downloadapp_googlePlay {
+    /* display: block; */
+    object-fit: contain;
+    width: 150px;
+    /* height: 80px; */
+}
+
+.downloadapp__qr{
+    /* object-fit: contain; */
+    height: 130px;
+    width: 130px;
+}

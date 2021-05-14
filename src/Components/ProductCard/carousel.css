@@ -1,0 +1,37 @@
+ 
+.carousel-container{
+
+
+    position: relative;
+    
+    
+}  
+
+
+
+
+@media only screen and (min-width: 1025px) {
+    .carousel-container{
+
+        width: 1850px;
+        position: relative;
+        right: 300px;
+
+    }      
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1025px) {
+    .carousel-container{
+
+        width: 330px;
+        position: relative;
+      left: 20px;
+        
+    }      
+}

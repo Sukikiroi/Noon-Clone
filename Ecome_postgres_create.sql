@@ -1,0 +1,354 @@
+CREATE TABLE "USER" (
+	"id" serial NOT NULL,
+	"account_owner" VARCHAR(255) NOT NULL,
+	"bio" VARCHAR(255) NOT NULL,
+	"first_name" VARCHAR(255) NOT NULL,
+	"email" VARCHAR(255) NOT NULL,
+	"phone" VARCHAR(255) NOT NULL,
+	"last_name" VARCHAR(255) NOT NULL,
+	"im_address" VARCHAR(255) NOT NULL,
+	"user_type" VARCHAR(255) NOT NULL,
+	"permissions" VARCHAR(255) NOT NULL,
+	CONSTRAINT "USER_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "CUSTOMER" (
+	"id" serial NOT NULL,
+	"default_address_id" VARCHAR(255) NOT NULL,
+	"email" VARCHAR(255) NOT NULL,
+	"phone" VARCHAR(255) NOT NULL,
+	"first_name" VARCHAR(255) NOT NULL,
+	"last_name" VARCHAR(255) NOT NULL,
+	"auth_provider" VARCHAR(255) NOT NULL,
+	"creation_time" VARCHAR(255) NOT NULL,
+	"auth_time" DATETIME NOT NULL,
+	"uid_firebase" VARCHAR(255) NOT NULL,
+	"verified_email" VARCHAR(255) NOT NULL,
+	"verified_mobile" VARCHAR(255) NOT NULL,
+	"profile" VARCHAR(255) NOT NULL,
+	"updated_at" DATETIME NOT NULL,
+	"accepts_marketing" BOOLEAN NOT NULL,
+	"accepts_marketing_updated_at" BOOLEAN NOT NULL,
+	"order_count" VARCHAR(255) NOT NULL,
+	"total_spent" VARCHAR(255) NOT NULL,
+	"state" VARCHAR(255) NOT NULL,
+	"tax_exempt" VARCHAR(255) NOT NULL,
+	"note" VARCHAR(255) NOT NULL,
+	"updated_at" VARCHAR(255) NOT NULL,
+	"last_order_name" VARCHAR(255) NOT NULL,
+	"last_order_id" VARCHAR(255) NOT NULL,
+	"currency" VARCHAR(255) NOT NULL,
+	CONSTRAINT "CUSTOMER_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "CUSTOMER_ADDRESS" (
+	"id" BINARY NOT NULL,
+	"customer_id" BINARY NOT NULL,
+	"address1" VARCHAR(255) NOT NULL,
+	"address2" VARCHAR(255) NOT NULL,
+	"city" VARCHAR(255) NOT NULL,
+	"country" VARCHAR(255) NOT NULL,
+	"country_name" VARCHAR(255) NOT NULL,
+	"first_name" VARCHAR(255) NOT NULL,
+	"last_name" VARCHAR(255) NOT NULL,
+	"phone" VARCHAR(255) NOT NULL,
+	"province" VARCHAR(255) NOT NULL,
+	"province_code" VARCHAR(255) NOT NULL,
+	"country_code" VARCHAR(255) NOT NULL,
+	"zip" VARCHAR(255) NOT NULL
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "CUSTOMER_TAG" (
+	"id" serial NOT NULL,
+	"customer_id" VARCHAR(255) NOT NULL,
+	"value" VARCHAR(255) NOT NULL,
+	CONSTRAINT "CUSTOMER_TAG_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "CUSTOMER_TAX_EXCEPTION" (
+	"id" serial NOT NULL,
+	"customer_id" VARCHAR(255) NOT NULL,
+	"tax_excemption" VARCHAR(255) NOT NULL,
+	CONSTRAINT "CUSTOMER_TAX_EXCEPTION_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "PRODUCT" (
+	"id" serial NOT NULL,
+	"title" VARCHAR(255) NOT NULL,
+	"product_type" VARCHAR(255) NOT NULL,
+	"vendor" VARCHAR(255) NOT NULL,
+	"created_at" VARCHAR(255) NOT NULL,
+	"updated_at" VARCHAR(255) NOT NULL,
+	"published_at" VARCHAR(255) NOT NULL,
+	"status" VARCHAR(255) NOT NULL,
+	CONSTRAINT "PRODUCT_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "PRODUCT_VARIANT" (
+	"id" serial NOT NULL,
+	"product_id" Integer NOT NULL,
+	"inventory_item_id" Integer NOT NULL,
+	"image_id" VARCHAR(255) NOT NULL,
+	"barcode" VARCHAR(255) NOT NULL,
+	"compare_at_price" VARCHAR(255) NOT NULL,
+	"created_at" Date NOT NULL,
+	"weight" VARCHAR(255) NOT NULL,
+	"inventory_policy" VARCHAR(255) NOT NULL,
+	"inventory_quantity" VARCHAR(255) NOT NULL,
+	"price" VARCHAR(255) NOT NULL,
+	"sku" VARCHAR(255) NOT NULL,
+	"tax_code" VARCHAR(255) NOT NULL,
+	"taxable" BOOLEAN NOT NULL,
+	"title" VARCHAR(255) NOT NULL,
+	"updated_at" Date NOT NULL,
+	"weight_unit" VARCHAR(255) NOT NULL,
+	"description" VARCHAR(255) NOT NULL,
+	CONSTRAINT "PRODUCT_VARIANT_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "PRODUCT_IMAGE" (
+	"id" serial NOT NULL,
+	"product_id" serial NOT NULL,
+	"created_at" VARCHAR(255) NOT NULL,
+	"updated_at" VARCHAR(255) NOT NULL,
+	"width" VARCHAR(255) NOT NULL,
+	"height" VARCHAR(255) NOT NULL,
+	"src" VARCHAR(255) NOT NULL,
+	"variant_ids" VARCHAR(255) NOT NULL,
+	"position" VARCHAR(255) NOT NULL,
+	CONSTRAINT "PRODUCT_IMAGE_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "PRODUCT_TAG" (
+	"id" serial NOT NULL,
+	"product_id" BINARY NOT NULL,
+	"value" VARCHAR(255) NOT NULL,
+	CONSTRAINT "PRODUCT_TAG_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "CATEGORIES" (
+	"id" serial NOT NULL,
+	"title" VARCHAR(255) NOT NULL,
+	"slug" VARCHAR(255) NOT NULL,
+	"parent_category" VARCHAR(255) NOT NULL,
+	"description" VARCHAR(255) NOT NULL,
+	"image" VARCHAR(255) NOT NULL,
+	"published_at" VARCHAR(255) NOT NULL,
+	"sort_order" VARCHAR(255) NOT NULL,
+	"updated_at" VARCHAR(255) NOT NULL,
+	CONSTRAINT "CATEGORIES_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "CATEGORIES_PRODUCT" (
+	"id" serial NOT NULL,
+	"id" serial NOT NULL,
+	"id" serial NOT NULL,
+	CONSTRAINT "CATEGORIES_PRODUCT_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "INVENTORY_ITEM" (
+	"id" serial NOT NULL,
+	"country_code_of_origin" serial(255) NOT NULL,
+	"created_at" serial(255) NOT NULL,
+	"sku" serial(255) NOT NULL,
+	"tracked" serial(255) NOT NULL,
+	CONSTRAINT "INVENTORY_ITEM_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "INVENTORY_LEVEL" (
+	"id" serial NOT NULL,
+	"nventory_item_id" serial NOT NULL,
+	"location_id" serial NOT NULL,
+	"available" BOOLEAN NOT NULL,
+	"updated_at" BOOLEAN NOT NULL,
+	CONSTRAINT "INVENTORY_LEVEL_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "NVENTORY_LOCATION" (
+	"id" serial NOT NULL,
+	"active" serial(255) NOT NULL,
+	"address1" serial(255) NOT NULL,
+	"address2" serial(255) NOT NULL,
+	"country" serial(255) NOT NULL,
+	"country_code" serial(255) NOT NULL,
+	"city" serial(255) NOT NULL,
+	"legacy" serial NOT NULL,
+	"name" serial(255) NOT NULL,
+	"phone" serial(255) NOT NULL,
+	"updated_at" serial(255) NOT NULL,
+	"zip" serial(255) NOT NULL,
+	CONSTRAINT "NVENTORY_LOCATION_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "REVIEWS" (
+	"id" serial NOT NULL,
+	"product_id" BINARY NOT NULL,
+	"email" VARCHAR(255) NOT NULL,
+	"first_name" VARCHAR(255) NOT NULL,
+	"last_name" VARCHAR(255) NOT NULL,
+	"selected_product" VARCHAR(255) NOT NULL,
+	"description" VARCHAR(255) NOT NULL,
+	"img_reviews" VARCHAR(255) NOT NULL,
+	CONSTRAINT "REVIEWS_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "ORDERS" (
+	"ID" serial NOT NULL,
+	"product_id" Integer NOT NULL,
+	"variant_id" Integer NOT NULL,
+	"customer_id" Integer NOT NULL,
+	"location_id" Integer NOT NULL,
+	"billing_address_id" Integer NOT NULL,
+	"quantity" VARCHAR(255) NOT NULL,
+	"product_exists" VARCHAR(255) NOT NULL,
+	"sku" VARCHAR(255) NOT NULL,
+	"unit_price" VARCHAR(255) NOT NULL,
+	"subtotal_price" VARCHAR(255) NOT NULL,
+	"total_price" VARCHAR(255) NOT NULL,
+	"note" VARCHAR(255) NOT NULL,
+	"order_status" VARCHAR(255) NOT NULL,
+	"source" VARCHAR(255) NOT NULL,
+	"created_at" Date NOT NULL,
+	"currency" VARCHAR(255) NOT NULL,
+	"updated_at" Date  NOT NULL,
+	"checkout_token" VARCHAR(255) NOT NULL,
+	"cart_token" VARCHAR(255) NOT NULL,
+	"buyer_accepts_marketing" VARCHAR(255) NOT NULL,
+	"browser_ip" VARCHAR(255) NOT NULL,
+	"device_id" VARCHAR(255) NOT NULL,
+	"shipping_method" VARCHAR(255) NOT NULL,
+	"tag" VARCHAR(255) NOT NULL,
+	CONSTRAINT "ORDERS_pk" PRIMARY KEY ("ID")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "FULFILLMENT" (
+	"id" serial NOT NULL,
+	"location_id" serial NOT NULL,
+	"created_at" VARCHAR(255) NOT NULL,
+	"status" VARCHAR(255) NOT NULL,
+	"tracking_number" VARCHAR(255) NOT NULL,
+	"updated_at" VARCHAR(255) NOT NULL,
+	CONSTRAINT "FULFILLMENT_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+CREATE TABLE "FULFILLMENT_ORDER" (
+	"id" BINARY NOT NULL,
+	"fulfillment_id" BINARY NOT NULL,
+	"order_id" BINARY NOT NULL,
+	CONSTRAINT "FULFILLMENT_ORDER_pk" PRIMARY KEY ("id")
+) WITH (
+  OIDS=FALSE
+);
+
+
+
+
+
+ALTER TABLE "CUSTOMER_ADDRESS" ADD CONSTRAINT "CUSTOMER_ADDRESS_fk0" FOREIGN KEY ("customer_id") REFERENCES "CUSTOMER"("id");
+
+ALTER TABLE "CUSTOMER_TAG" ADD CONSTRAINT "CUSTOMER_TAG_fk0" FOREIGN KEY ("customer_id") REFERENCES "CUSTOMER"("id");
+
+ALTER TABLE "CUSTOMER_TAX_EXCEPTION" ADD CONSTRAINT "CUSTOMER_TAX_EXCEPTION_fk0" FOREIGN KEY ("customer_id") REFERENCES "CUSTOMER"("id");
+
+
+ALTER TABLE "PRODUCT_VARIANT" ADD CONSTRAINT "PRODUCT_VARIANT_fk0" FOREIGN KEY ("product_id") REFERENCES "PRODUCT"("id");
+ALTER TABLE "PRODUCT_VARIANT" ADD CONSTRAINT "PRODUCT_VARIANT_fk1" FOREIGN KEY ("inventory_item_id") REFERENCES "INVENTORY_ITEM"("id");
+ALTER TABLE "PRODUCT_VARIANT" ADD CONSTRAINT "PRODUCT_VARIANT_fk2" FOREIGN KEY ("image_id") REFERENCES "PRODUCT_IMAGE"("id");
+
+ALTER TABLE "PRODUCT_IMAGE" ADD CONSTRAINT "PRODUCT_IMAGE_fk0" FOREIGN KEY ("product_id") REFERENCES "PRODUCT"("id");
+
+ALTER TABLE "PRODUCT_TAG" ADD CONSTRAINT "PRODUCT_TAG_fk0" FOREIGN KEY ("product_id") REFERENCES "PRODUCT"("id");
+
+
+ALTER TABLE "CATEGORIES_PRODUCT" ADD CONSTRAINT "CATEGORIES_PRODUCT_fk0" FOREIGN KEY ("id") REFERENCES "CATEGORIES"("id");
+ALTER TABLE "CATEGORIES_PRODUCT" ADD CONSTRAINT "CATEGORIES_PRODUCT_fk1" FOREIGN KEY ("id") REFERENCES "PRODUCT"("id");
+
+
+ALTER TABLE "INVENTORY_LEVEL" ADD CONSTRAINT "INVENTORY_LEVEL_fk0" FOREIGN KEY ("nventory_item_id") REFERENCES "INVENTORY_ITEM"("id");
+ALTER TABLE "INVENTORY_LEVEL" ADD CONSTRAINT "INVENTORY_LEVEL_fk1" FOREIGN KEY ("location_id") REFERENCES "NVENTORY_LOCATION"("id");
+
+
+ALTER TABLE "REVIEWS" ADD CONSTRAINT "REVIEWS_fk0" FOREIGN KEY ("product_id") REFERENCES "PRODUCT"("id");
+
+ALTER TABLE "ORDERS" ADD CONSTRAINT "ORDERS_fk0" FOREIGN KEY ("product_id") REFERENCES "PRODUCT"("id");
+ALTER TABLE "ORDERS" ADD CONSTRAINT "ORDERS_fk1" FOREIGN KEY ("variant_id") REFERENCES "PRODUCT_VARIANT"("id");
+ALTER TABLE "ORDERS" ADD CONSTRAINT "ORDERS_fk2" FOREIGN KEY ("customer_id") REFERENCES "PRODUCT_VARIANT"("id");
+ALTER TABLE "ORDERS" ADD CONSTRAINT "ORDERS_fk3" FOREIGN KEY ("location_id") REFERENCES "NVENTORY_LOCATION"("id");
+ALTER TABLE "ORDERS" ADD CONSTRAINT "ORDERS_fk4" FOREIGN KEY ("billing_address_id") REFERENCES "CUSTOMER_ADDRESS"("id");
+
+ALTER TABLE "FULFILLMENT" ADD CONSTRAINT "FULFILLMENT_fk0" FOREIGN KEY ("location_id") REFERENCES "NVENTORY_LOCATION"("id");
+
+ALTER TABLE "FULFILLMENT_ORDER" ADD CONSTRAINT "FULFILLMENT_ORDER_fk0" FOREIGN KEY ("fulfillment_id") REFERENCES "FULFILLMENT"("id");
+ALTER TABLE "FULFILLMENT_ORDER" ADD CONSTRAINT "FULFILLMENT_ORDER_fk1" FOREIGN KEY ("order_id") REFERENCES "ORDERS"("ID");
+// InSERt into product Variant
+INSERT INTO public."PRODUCT_VARIANT"(
+	id, product_id,  inventory_quantity, price,   title,   weight_unit, description, "Color",  "Size")
+	VALUES (1,'15','5000','600','T-Shirt','10','i am Shirt Description ','Green','Large');

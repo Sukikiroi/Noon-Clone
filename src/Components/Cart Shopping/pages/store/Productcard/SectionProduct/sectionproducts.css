@@ -1,0 +1,10 @@
+.sectionproducts{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 0 20px !important;
+}
+
+.sectionproducts::-webkit-scrollbar{
+    display: none;
+}

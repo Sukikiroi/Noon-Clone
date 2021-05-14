@@ -1,0 +1,140 @@
+.productpage__carousel__container{
+    margin-top: 30px !important;
+    width: 100px;
+}
+
+.size_Value{
+    width: 100px;
+}
+
+.productpage__carousel{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.productpage__carousel__left{
+    flex: 0.1;
+    overflow-y: scroll;
+   position: relative;
+   
+}
+.productpage__carousel__left::-webkit-scrollbar{
+    display: none;
+}
+.productpage__carousel__left img {
+    object-fit: contain;
+    width: 100px;
+    opacity: 0.6;
+    border-radius: 8px;
+    padding: 2px;
+    box-sizing: border-box;
+
+}
+.productpage__carousel__left img:hover {
+    opacity: 0.8;
+}
+
+.productpage__carousel__left__activeimage{
+    opacity: 1 !important;
+    border: solid 2px black;
+    box-sizing: border-box;
+    padding: 0px !important;
+   
+}
+
+.imageInSlider{
+    width: 100px;
+    margin: 0 auto;
+    object-fit: contain !important;
+    
+
+}
+
+.productpage__carousel__right{
+    flex: 0.9;
+    position: relative;
+     
+    width: 50px;
+}
+
+.productpqge__right__title {
+    position: relative;
+    left:20px;
+    font-weight: 200;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.product__best__seller{
+    position: relative;
+    left:20px;
+    background-color: white;
+
+}
+.product__rating{
+    position: relative;
+    left:20px;
+}
+
+.productpqge__right__price {
+    font-weight: 600;
+    font-size: 30px;
+    position: relative;
+    left:20px;
+}
+
+
+.prodcutpage__right__favorite{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: black;
+    box-shadow: rgb(218, 218, 218) 0 0 8px 3px;
+    border-radius: 999px;
+    padding: 5px;
+    transition: all 200ms ease-in-out;
+}
+
+.prodcutpage__right__favorite:hover{
+    box-shadow: rgb(187, 187, 187) 0 0 8px 3px;
+}
+
+.prodcutpage__right__message{
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 10px;
+    justify-content: space-between;
+    position: relative;
+    left: 20px;
+}
+
+
+.prodcutpage__right__dropdown .ant-select-selector{
+    border: solid 1px black !important;
+    border-radius: 8px !important;
+    box-shadow: lightgrey 0px 0px 6px 2px !important;
+}
+
+.prodcutpage__right__dropdown .ant-select-arrow {
+    color: black !important;
+}
+
+.prodcutpage__right__two__dropdowns .MuiAccordion-rounded {
+    border-radius: 10px !important;
+    width: 90%;
+    position:relative;
+    left: 20px;
+
+}
+
+.prodcutpage__right__two__dropdowns .MuiAccordionSummary-root:hover{
+    background-color: lightgrey !important;
+    border-radius: 10px !important;
+
+}
+

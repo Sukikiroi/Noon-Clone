@@ -1,0 +1,36 @@
+ .rootproduct{
+height: 200px;
+width: 200px;
+ position: relative;
+ left: 50%;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ background-color: rgb(195, 255, 98);
+ }
+
+ .rootproduct:hover .addtocart{
+    background-color: slateblue;
+    opacity: 1;
+    height: 50px;
+    color: white;
+    /* transform: translateY(-50px); */
+ }
+
+ .addtocart{
+    height: 0px;
+    width: 100%;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: #000000;
+    color: transparent;
+text-align: center;
+    position: absolute;
+bottom: -5px;
+left: -1px;
+transition: height 0.5s;
+font-family: OpenSans,Arial,Helvetica,sans-serif;
+white-space: nowrap;
+ 
+opacity: 1;
+ }

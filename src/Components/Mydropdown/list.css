@@ -1,0 +1,6 @@
+.list{
+    position: relative;
+ left:80px;
+    list-style-type: none !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

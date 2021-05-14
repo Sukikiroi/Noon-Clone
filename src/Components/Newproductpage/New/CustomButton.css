@@ -1,0 +1,16 @@
+.button__custom{
+    /* margin: 15px auto; */
+    color: white;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    position: relative;
+    left: 20px;
+    width: 90%;
+    /* width: 75%; */
+}

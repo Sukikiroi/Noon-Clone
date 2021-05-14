@@ -1,0 +1,213 @@
+/* .drawerProducts{
+    height: 100%;
+} */
+
+
+.navbar2{
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    /* margin-top: 10px; */
+    /* margin-bottom: 10px; */
+    /* max-width: 1400px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar2__searchContainer{
+    margin-left: 10px;
+    margin-right: 20px;
+    position:relative;
+   top:10px;
+    display: flex;
+    flex: 1;
+    left:50px;
+    align-items: center;
+    border: solid black 2px;
+    border-radius: 60px;
+    width: 80px;
+    /* background-color: tomato; */
+  
+
+}
+@media only screen and (width: 731px) {
+    .navbar2__searchContainer {
+        position:relative;
+        left:10px;
+    }
+  }
+
+
+
+.navbar2__searchContainer__input{
+    flex: 1;
+    background: white;
+    margin: 5px 0px 5px 20px;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 50px;
+}
+
+.navbar2__searchContainer__searchicon{
+    background-color: black;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    height: 42px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+
+.navbar2__cat{
+    display: flex;
+    align-items: center !important;
+    color: white;
+    transition: ease-in-out 200ms;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 140px;
+}
+
+.navbar2__cat:hover{
+    background-color: lightgray;
+    /* background-color: #fff898; */
+}
+
+
+.navbar2__cat__opened{
+    background-color: lightgray;
+    /* background-color: #fff898; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar2__cat__arrow{
+    padding: 0 5px;
+    transition: ease-in-out 100ms;
+    font-size: 16px;
+    transform: rotateZ(180deg);
+}
+
+.navbar2__cat__arrow__animation{
+    transform: rotateZ(360deg) !important;
+}
+
+.navbar2__cat__choices{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+.navbar2__iconSearchinputnone{
+    opacity: 0;
+}
+
+.navbar2__iconSearchinput{
+    opacity: 1;
+    transition: opacity 200ms ;
+}
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+.shipto{
+    margin: auto 0;
+    margin-right: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    width: 80px;
+}
+
+.shiptoOptions{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    /* margin-left: 15px; */
+}
+
+.shiptoOption{
+    text-align: center;
+}
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+
+.navbar2__signinbutton{
+    font-weight: 600;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+
+.navbar__rowOne{
+    height: 4vh;
+}
+
+.navbar__rowOne__linksupport{
+    font-family: 'Josefin Sans', sans-serif;
+    /* color: #666; */
+    color: black;
+    text-decoration: none;
+    font-size: inherit;
+    outline: none;
+    margin: 0 10px;
+}
+
+.navbar__rowOne__linksupport:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+.navbar__rowOne__item{
+    margin-left: 25px;
+}
+
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+
+.tabSignRegister{
+    outline: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+}
+
+
+
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */
+/* __________________________________________________ */

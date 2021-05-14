@@ -1,0 +1,18 @@
+[
+    {   "id": 6,
+        "imgSrc": "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2019/01/07/goods_img-v1/20190107105843_28034.jpg",
+        "titleProduct": "1808-DL180 Fashion Color Matching Thickened Warm Long-sleeved Men's Sweater",
+        "discount": 35,
+        "price": 5.59,
+        "Category":"robotic"
+    },
+    {"id":2,
+        "imgSrc": "https://gloimg.gbtcdn.com/soa/gb/pdm-product-pic/Electronic/2020/08/07/goods_img-v2/20200807171735_97744.jpg",
+        "titleProduct": "Xiaomi Redmi 9C 4G Smartphone 6.53 inch Media Tek Helio G35 2.3GHz Octa-core 13MP AI Triple Camera 5000mAh Battery EU Version",
+        "discount": 50,
+        "price": 552.59,
+        "Category":"phone"
+    }
+   
+ 
+]
